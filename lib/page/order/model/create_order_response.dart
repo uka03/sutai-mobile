@@ -1,0 +1,15 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'create_order_response.g.dart';
+
+@JsonSerializable()
+class CreateOrderResponse {
+  final String? message;
+
+  const CreateOrderResponse({this.message});
+
+  factory CreateOrderResponse.fromJson(Map<String, dynamic> json) =>
+      _$CreateOrderResponseFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CreateOrderResponseToJson(this);
+}
